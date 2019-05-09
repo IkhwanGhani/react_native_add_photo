@@ -7,7 +7,7 @@ const platform = Platform.OS;
 export const DEFAULT_COLOR = {
     transparent: "transparent",
     background: "#fff",
-    text: "#000",
+    text: "#555",
     primary: platform === "ios" ? "#6200ee" : "#6200ee",
     secondary: platform === "ios" ? "#03dac6" : "#03dac6",
     success: platform === "ios" ? "#5cb85c" : "#5cb85c",

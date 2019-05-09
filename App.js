@@ -30,7 +30,7 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 //style
 //import DEFAULT_COLOR from "./color";
 import mainStyle from "./styles/styles";
-import photoStyle from "./styles/photoStyles"
+import photoStyle from "./styles/photoStyles";
 
 class App extends Component {
   constructor(props) {
