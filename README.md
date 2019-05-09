@@ -3,8 +3,9 @@
 ## Installation
 1. ``` npm install ```
 2. ``` react-native link ```
-(below step if using react-native-camera)
-3. Insert the following lines in android/app/build.gradle :
+
+## react-native-camera manual installation if react-native-camera error build
+1. Insert the following lines in android/app/build.gradle :
 - inside defaultConfig block insert either:
 ``` 
 android {
@@ -15,13 +16,13 @@ android {
   }
 }
 ```
-4. Declare the permissions in your Android Manifest (required for video recording feature)
+2. Declare the permissions in your Android Manifest (required for video recording feature)
 ``` 
 <uses-permission android:name="android.permission.RECORD_AUDIO"/>
 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 ```
-5. Add jitpack to android/build.gradle
+3. Add jitpack to android/build.gradle
 ``` 
 allprojects {
     repositories {

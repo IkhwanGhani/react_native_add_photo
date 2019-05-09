@@ -19,7 +19,6 @@ import PhotoGrid from "react-native-thumbnail-grid";
 import CameraRollPicker from "react-native-camera-roll-picker";
 import CustomModal from "react-native-modal";
 import ImagePicker from "react-native-image-crop-picker";
-// let ImagePicker = NativeModules.ImageCropPicker;
 
 //Icons
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
