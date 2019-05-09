@@ -1,44 +1,42 @@
-# Custom React Native Snippets
+# React Native Add Photo
 
-This repository contains few of the snippets that i use in my react native
-
-## Setup Instructions (VSCODE)
-
-- Open Visual Studio Code
-
-- CODE > PREFERENCES > USER SNIPPETS > **javascriptreact.json/jsx-attr.json/jsx.json**
-
-- Copy the code from this repository into that file.
-
-## Issues :
-
-- In case your javascriptreact.json snippets don't work, try and copy it into :
-
-- CODE > PREFERENCES > USER SNIPPETS > **javascript.json**
-
-## javascript.json/javascriptreact.json Snippets
-
-```sh
-imrncIkhwanGhani  - Import React Native Component (mySnippet)
-imrnc  - Import React Native Component
-imrnfc - Import React Native Functional Component
-imrnp -  Create Panresponder.create
-imrnss - Create React Native Style Sheet
-clog   - console.log("$1")
-rnmap  - React Native Map Method
-rndime - const {width,height} = Dimensions.get('window')
-rncomp - Create a React Native Component
-rnfcomp  - Create a Functional React Native Component
+## Installation
+1. ``` npm install ```
+2. ``` react-native link ```
+3. Insert the following lines in android/app/build.gradle :
+- inside defaultConfig block insert either:
+``` 
+android {
+  ...
+  defaultConfig {
+    ...
+    missingDimensionStrategy 'react-native-camera', 'general' <-- insert this line
+  }
+}
+```
+4. Declare the permissions in your Android Manifest (required for video recording feature)
+``` 
+<uses-permission android:name="android.permission.RECORD_AUDIO"/>
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+```
+5. Add jitpack to android/build.gradle
+``` 
+allprojects {
+    repositories {
+        maven { url "https://jitpack.io" }
+        maven { url "https://maven.google.com" }
+    }
+}
 ```
 
-## jsx-attr.json -> JSX Attribute Snippets
-
-```sh
-rnajc - alignItems:'center',justifyContent:'center'
-```
-
-## jsx.json -> JSX Snippets
-
-```sh
-<but - <Button title='${1:title}' onPress={()=>${2:alert('button pressed')}}/>
-```
+## Reference
+- https://facebook.github.io/react-native/
+- https://github.com/react-native-community/react-native-camera
+- https://github.com/jeanpan/react-native-camera-roll-picker
+- https://github.com/wassgha/react-native-fullwidth-image
+- https://github.com/ivpusic/react-native-image-crop-picker
+- https://github.com/ihor/react-native-scalable-image
+- https://github.com/duyluonglc/react-native-thumbnail-grid
+- https://github.com/react-native-community/react-native-modal
+- https://github.com/oblador/react-native-vector-icons
