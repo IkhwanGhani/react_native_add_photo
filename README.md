@@ -3,6 +3,7 @@
 ## Installation
 1. ``` npm install ```
 2. ``` react-native link ```
+(below step if using react-native-camera)
 3. Insert the following lines in android/app/build.gradle :
 - inside defaultConfig block insert either:
 ``` 
